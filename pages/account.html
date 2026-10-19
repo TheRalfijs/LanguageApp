@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <!-- @include head -->
+  <title data-i18n="account.title">Konts</title>
+  <meta name="robots" content="noindex">
+  <script type="module" src="/src/pages/account.js"></script>
+</head>
+<body data-auth="required">
+  <!-- @include header -->
+  <main id="main" class="container container--narrow">
+    <h1 data-i18n="account.title">Konts</h1>
+    <p id="signed-in-as"></p>
+    <!-- Withdrawal ("Atteikties no līguma"), purchases and account deletion: step 7 -->
+    <button class="btn btn--secondary" type="button" id="sign-out" data-i18n="account.signOut">Iziet</button>
+  </main>
+  <!-- @include footer -->
+</body>
+</html>

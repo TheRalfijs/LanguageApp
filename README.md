@@ -69,3 +69,55 @@ Everything about an exam's format lives here; no exam rules are hard-coded. Addi
   `launch.fullProductLaunchDate` in `config/app.json` (null = not launched yet).
 - `calibration.js` — AI vs teacher agreement; gate opens at `calibration.minScripts` scripts
   with ≥ `calibration.minAgreement` within `maxBandDiff` band on every criterion.
+
+## Supabase setup
+
+1. **Create a project** at supabase.com — region **EU (Frankfurt)**.
+2. **Run the migrations** in `supabase/migrations/` in file-name order, either:
+   - SQL editor: paste each file and run it, **or**
+   - CLI: `npx supabase link --project-ref <ref>` then `npx supabase db push`.
+3. **Local env** — copy `.env.example` to `.env` and fill in from *Project Settings → API*:
+   `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` (public), `SUPABASE_URL`,
+   `SUPABASE_SERVICE_ROLE_KEY` (secret — server only, never commit, never prefix with `VITE_`).
+4. **Auth → URL configuration**
+   - Site URL: `https://[DOMAIN]`
+   - Redirect URLs: `http://localhost:5173/**`, `http://localhost:8888/**`, `https://[DOMAIN]/**`,
+     and your Netlify preview pattern, e.g. `https://*--<site>.netlify.app/**`.
+5. **Auth → Email templates** — edit **Magic Link** *and* **Confirm signup** so the email has
+   both the link and the code (users on phones often open mail in another app):
+
+   Subject: `Pieteikšanās kods / Login code / Код для входу`
+   ```html
+   <h2>{{ .Token }}</h2>
+   <p>Tavs pieteikšanās kods. <a href="{{ .ConfirmationURL }}">Ieiet ar saiti</a>.</p>
+   <p>Your login code. <a href="{{ .ConfirmationURL }}">Log in with the link</a>.</p>
+   <p>Ваш код для входу. <a href="{{ .ConfirmationURL }}">Увійти за посиланням</a>.</p>
+   <p style="color:#666">Ja tu to nepieprasīji, ignorē šo e-pastu. / If you didn't ask for this, ignore this email. / Якщо ви цього не запитували, проігноруйте цей лист.</p>
+   ```
+6. **Make yourself admin** (after logging in once), in the SQL editor:
+   ```sql
+   update public.profiles set is_admin = true
+   where id = (select id from auth.users where email = 'you@example.com');
+   ```
+   `is_admin` can only be changed this way — the API does not let users write that column.
+
+> The built-in Supabase mailer is heavily rate limited (a few emails per hour) — fine for
+> testing. Step 7 switches Auth email to Resend SMTP.
+
+### Security model
+
+- RLS is enabled on **every** table; the API grants are revoked and re-granted explicitly.
+- The browser can only **read its own** rows, and update its own `locale` / `target_level` /
+  `exam_date`. Everything else (attempts, responses, purchases, grading) is written by Netlify
+  Functions with the service role key.
+- Items are never readable from the browser directly; functions serve them without
+  `answer_key_json`. Responses are only visible once `released_at` is set.
+- Deleting an auth user deletes profile, attempts and responses; purchases are kept with
+  `user_id = null` (accounting records).
+
+### Testing migrations + RLS locally
+
+`npm run test:db` creates a throwaway database on a **local** Postgres (15+), applies small
+stand-ins for Supabase's `auth`/`storage` schemas (`supabase/tests/00_local_stubs.sql`), runs
+all migrations and then `supabase/tests/rls_test.sql`. Set `PGHOST`/`PGPORT`/`PGUSER` as needed.
+It never touches your Supabase project.

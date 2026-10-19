@@ -42,6 +42,32 @@
     "likely_fail": "Likely fail",
     "not_attempted": "Not attempted"
   },
+  "login": {
+    "title": "Log in",
+    "intro": "Enter your email. We'll send you a login link and a code — no password needed.",
+    "emailLabel": "Email address",
+    "send": "Send link",
+    "sending": "Sending…",
+    "sentTitle": "Check your email",
+    "sentBody": "We sent a link to {email}. Open it on this phone, or enter the code from the email.",
+    "codeLabel": "Code from the email",
+    "verify": "Log in",
+    "changeEmail": "Use a different email",
+    "spamHint": "No email? Check your spam folder and wait a minute.",
+    "errors": {
+      "invalidEmail": "Enter a valid email address.",
+      "tooMany": "Too many attempts. Wait a minute and try again.",
+      "badCode": "The code is wrong or has expired. Request a new one.",
+      "linkExpired": "This link is invalid or has expired. Request a new one.",
+      "generic": "Something went wrong. Please try again.",
+      "notConfigured": "Login is not available yet."
+    }
+  },
+  "account": {
+    "title": "Account",
+    "signedInAs": "You're logged in as {email}.",
+    "signOut": "Log out"
+  },
   "footer": {
     "disclaimer": "Independent learning platform. Not affiliated with VIAA.",
     "terms": "Terms of service",

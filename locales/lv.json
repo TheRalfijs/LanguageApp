@@ -42,6 +42,32 @@
     "likely_fail": "Visticamāk nenokārtotu",
     "not_attempted": "Nav pildīts"
   },
+  "login": {
+    "title": "Ieiet",
+    "intro": "Ievadi e-pastu. Mēs nosūtīsim pieteikšanās saiti un kodu — parole nav vajadzīga.",
+    "emailLabel": "E-pasta adrese",
+    "send": "Sūtīt saiti",
+    "sending": "Sūta…",
+    "sentTitle": "Pārbaudi e-pastu",
+    "sentBody": "Mēs nosūtījām saiti uz {email}. Atver to šajā tālrunī vai ievadi kodu no e-pasta.",
+    "codeLabel": "Kods no e-pasta",
+    "verify": "Ieiet",
+    "changeEmail": "Mainīt e-pastu",
+    "spamHint": "Nav e-pasta? Pārbaudi mapi “Mēstules” un pagaidi minūti.",
+    "errors": {
+      "invalidEmail": "Ievadi derīgu e-pasta adresi.",
+      "tooMany": "Pārāk daudz mēģinājumu. Pagaidi minūti un mēģini vēlreiz.",
+      "badCode": "Kods nav pareizs vai ir beidzies. Pieprasi jaunu.",
+      "linkExpired": "Saite nav derīga vai ir beigusies. Pieprasi jaunu.",
+      "generic": "Kaut kas nogāja greizi. Mēģini vēlreiz.",
+      "notConfigured": "Pieteikšanās vēl nav pieejama."
+    }
+  },
+  "account": {
+    "title": "Konts",
+    "signedInAs": "Tu esi pieteicies kā {email}.",
+    "signOut": "Iziet"
+  },
   "footer": {
     "disclaimer": "Neatkarīga mācību platforma. Nav saistīta ar VIAA.",
     "terms": "Lietošanas noteikumi",
