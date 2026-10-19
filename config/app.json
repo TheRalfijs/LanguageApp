@@ -15,5 +15,11 @@
   },
   "launch": { "fullProductLaunchDate": null },
 
-  "calibration": { "minScripts": 50, "minAgreement": 0.8, "maxBandDiff": 1 }
+  "calibration": { "minScripts": 50, "minAgreement": 0.8, "maxBandDiff": 1 },
+
+  "rateLimits": {
+    "grading": { "user": 30, "anon": 3, "anonIp": 10 },
+    "transcription": { "user": 30, "anon": 2, "anonIp": 6 },
+    "adminGenerate": { "user": 200 }
+  }
 }

@@ -143,3 +143,39 @@ Everything about an exam's format lives here; no exam rules are hard-coded. Addi
 stand-ins for Supabase's `auth`/`storage` schemas (`supabase/tests/00_local_stubs.sql`), runs
 all migrations and then `supabase/tests/rls_test.sql`. Set `PGHOST`/`PGPORT`/`PGUSER` as needed.
 It never touches your Supabase project.
+
+## Server (Netlify Functions)
+
+All API keys live only in Netlify env vars (see `.env.example`). Functions use the modern
+Netlify API (`export default async (req) => Response`, `export const config = { path }`) and are
+served under `/api/…`. Run them locally with `npx netlify dev` (http://localhost:8888) — it reads
+`.env` and serves Vite + functions together.
+
+`netlify/functions/_lib/`:
+
+| Module | What |
+|---|---|
+| `http.js` | `handler()` wrapper (errors → JSON; never leaks internals), `json()`, `readJson()` |
+| `auth.js` | `getCaller()` (Supabase JWT or hashed `X-Anon-Token`), `requireUser`, `requireAdmin`, `ownerOf` |
+| `rate-limit.js` | Daily limits from `config/app.json → rateLimits`; anonymous visitors are limited per token **and** per hashed IP |
+| `ai-usage.js` | Cost estimate (`config/ai-pricing.json`) + `logUsage()` into `ai_usage` for every paid call |
+| `llm.js` | Structured JSON calls: `output_config.format` + Ajv validation + semantic check, one retry with the errors, refusal handling, server-side fallback |
+| `stt/` | Speech-to-text adapter (`transcribe()` interface); `elevenlabs.js` = Scribe. Switch with `STT_PROVIDER` |
+| `tts/` | Azure neural TTS + permanent cache in the `tts-cache` bucket (content-hash file names) |
+
+**Note on "temperature 0":** Claude models newer than Opus 4.6 reject any temperature other
+than 1 (HTTP 400), so `llm.js` only sends `temperature: 0` to older models. Consistency comes
+from the fixed rubric in the prompt, forced JSON output with schema validation, a fixed
+`LLM_EFFORT`, and storing the full output + prompt version for calibration.
+
+**TTS is generated once:** `ensureTtsAudio()` is called when items are created/approved (admin)
+or by a script — never on a user request. Users only get the stored public URL.
+
+`GET /api/health` shows which services are configured (booleans only).
+
+### Trying the AI providers with real keys
+
+```bash
+node --env-file=.env scripts/smoke-ai.js          # llm + tts + stt (a few cents)
+node --env-file=.env scripts/smoke-ai.js llm      # just one
+```

@@ -1,0 +1,17 @@
+{
+  "_note": "Provider list prices used to estimate ai_usage.cost_eur. Check them against the providers' pricing pages and update when they change.",
+  "usdToEur": 0.92,
+  "llm": {
+    "claude-opus-5-5":   { "inputPerMTokUsd": 4,   "outputPerMTokUsd": 20,  "cacheReadPerMTokUsd": 0.2,  "cacheWritePerMTokUsd": 5 },
+    "claude-sonnet-5-5": { "inputPerMTokUsd": 2,   "outputPerMTokUsd": 10,  "cacheReadPerMTokUsd": 0.2,  "cacheWritePerMTokUsd": 2.5 },
+    "claude-haiku-5-5":  { "inputPerMTokUsd": 0.1, "outputPerMTokUsd": 0.5, "cacheReadPerMTokUsd": 0.01, "cacheWritePerMTokUsd": 0.125 },
+    "claude-opus-5":     { "inputPerMTokUsd": 5,   "outputPerMTokUsd": 25,  "cacheReadPerMTokUsd": 0.5,  "cacheWritePerMTokUsd": 6.25 },
+    "claude-opus-4-8":   { "inputPerMTokUsd": 5,   "outputPerMTokUsd": 25,  "cacheReadPerMTokUsd": 0.5,  "cacheWritePerMTokUsd": 6.25 }
+  },
+  "stt": {
+    "elevenlabs": { "perAudioHourUsd": 0.4, "_check": "verify Scribe price for your plan" }
+  },
+  "tts": {
+    "azure": { "perMillionCharsUsd": 16, "_check": "verify Azure neural TTS price for your region" }
+  }
+}

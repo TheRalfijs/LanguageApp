@@ -1,0 +1,13 @@
+{
+  "_note": "Text-to-speech settings per content language. Changing voice or rate creates new cache entries (old audio stays valid).",
+  "provider": "azure",
+  "format": "audio-24khz-48kbitrate-mono-mp3",
+  "languages": {
+    "lv": {
+      "locale": "lv-LV",
+      "voices": { "female": "lv-LV-EveritaNeural", "male": "lv-LV-NilsNeural" },
+      "defaultVoice": "female",
+      "rate": "-5%"
+    }
+  }
+}
