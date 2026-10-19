@@ -18,7 +18,9 @@
   "home": {
     "headline": "Find out if you would pass B1 today",
     "lead": "A free 15-minute test shows an approximate score for each of the four skills, and which one to fix first.",
-    "cta": "Start the free test"
+    "cta": "Start the free test",
+    "eyebrow": "Latvian state language test, level B1",
+    "ctaNote": "No sign-up · about 15 minutes · free"
   },
   "notFound": {
     "title": "Page not found",
@@ -67,6 +69,95 @@
     "title": "Account",
     "signedInAs": "You're logged in as {email}.",
     "signOut": "Log out"
+  },
+  "landing": {
+    "who": {
+      "title": "Who it's for",
+      "workTitle": "You need B1 for work",
+      "workBody": "Shops, service jobs and other customer-facing work often require state language skills at level B1.",
+      "ukraineTitle": "For Ukrainians",
+      "ukraineBody": "Interface and explanations in Ukrainian, tasks in Latvian — just like the exam.",
+      "residentsTitle": "For foreign residents",
+      "residentsBody": "Explanations in English while your Latvian is still getting there.",
+      "busyTitle": "For busy people",
+      "busyBody": "Works on your phone. Short tasks you can do on a break."
+    },
+    "rule": {
+      "title": "How the 60% rule works",
+      "body": "The exam has four parts: listening, reading, writing and speaking. To pass, you need at least 60% of the maximum points in each part. A strong part cannot make up for a weak one.",
+      "exampleTitle": "Example",
+      "exampleCaption": "Average 76%, but the exam is not passed: speaking is below 60%.",
+      "lineLabel": "Vertical line — the 60% pass line",
+      "outro": "That's why we show your result for each skill separately and help you fix the weakest one first."
+    },
+    "how": {
+      "title": "How it works",
+      "step1Title": "Take the free test",
+      "step1Body": "4 reading and 4 listening questions, a short text (60–80 words) and a 1-minute spoken answer.",
+      "step2Title": "See your result for each skill",
+      "step2Body": "An approximate percentage against the 60% line: likely pass, borderline or likely fail.",
+      "step3Title": "Find out what to fix first",
+      "step3Body": "For writing and speaking: scores per criterion and your actual mistakes with corrections."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "note": "One-off payments. No subscription, no auto-renewal.",
+      "freeName": "Free test",
+      "freePrice": "€0",
+      "freeF1": "All four skills, ~15 minutes",
+      "freeF2": "Approximate result for each skill",
+      "freeF3": "No account needed until results",
+      "freeCta": "Start the test",
+      "essayName": "Essay check",
+      "essayPrice": "€5",
+      "essayUnit": "per task",
+      "essayF1": "A B1 writing task with a timer and word counter",
+      "essayF2": "Scores per exam criterion",
+      "essayF3": "Every mistake with a correction and explanation",
+      "essayReview": "Right now every task is also reviewed by a person — feedback within 48 hours.",
+      "essayCta": "Check my writing",
+      "foundingBadge": "Limited offer",
+      "foundingName": "Founding pass",
+      "foundingPrice": "€29",
+      "foundingUnit": "one-off",
+      "foundingF1": "90 days of full B1 access when the full version opens",
+      "foundingF2": "Practice in all four skills and full mock exams",
+      "foundingF3": "Refund on request until launch",
+      "foundingLaunch": "Planned launch: [LAUNCH_DATE]",
+      "foundingCta": "Reserve for €29"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Is this a VIAA test?",
+      "a1": "No. This is an independent learning platform, not affiliated with VIAA. All tasks are original and follow the format of the exam tasks.",
+      "q2": "How accurate is the result?",
+      "a2": "It is an approximate estimate, not an exam result. The free test is short, so it is better at showing your weakest skill than at predicting an exact score.",
+      "q3": "How are writing and speaking assessed?",
+      "a3": "An AI assesses your work against the exam criteria. We regularly compare its scores with those of a qualified teacher. In speaking we assess what you said; the pronunciation score is only approximate.",
+      "q4": "What language are the tasks in?",
+      "a4": "Tasks are always in Latvian, as in the exam. Explanations and feedback are in the language you choose: Latvian, English or Ukrainian.",
+      "q5": "Do I need an account?",
+      "a5": "You can start the free test without an account. To see full feedback, enter your email and we'll send you a login link. No password needed.",
+      "q6": "What happens to my recordings?",
+      "a6": "Speaking recordings are deleted automatically after 30 days. You can delete your account and all your data at any time.",
+      "q7": "Can I get a refund for the founding pass?",
+      "a7": "Yes. Until the full version launches, we refund the full amount on request: use “Withdraw from contract” in your account or email us.",
+      "q8": "How do I register for the exam?",
+      "a8": "The exam is run by a state institution, not by us. Our exam guide sums up how to register, what it costs and when results come out.",
+      "guideLink": "Open the exam guide"
+    },
+    "final": {
+      "title": "Find out where you stand today",
+      "body": "15 minutes, free, no sign-up."
+    }
+  },
+  "legal": {
+    "termsTitle": "Terms of service",
+    "termsDescription": "{brand} terms of service: the service, prices, right of withdrawal.",
+    "privacyTitle": "Privacy policy",
+    "privacyDescription": "How {brand} processes your data, recordings and texts.",
+    "guideTitle": "Exam guide",
+    "guideDescription": "Latvian state language test B1: registration, fee, what happens on the day and results."
   },
   "footer": {
     "disclaimer": "Independent learning platform. Not affiliated with VIAA.",

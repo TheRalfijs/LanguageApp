@@ -1,6 +1,6 @@
 // Auth helpers: magic link + one-time code, header state, locale ↔ profile sync.
 import { supabase } from './supabase.js';
-import { getLocale, setLocale, onLocaleChange, applyTranslations, ENABLED_LOCALES } from './i18n.js';
+import { getLocale, setLocale, onLocaleChange, applyTranslations, staticPageUrl, ENABLED_LOCALES } from './i18n.js';
 
 let currentUser = null;
 let profileLocale = null;
@@ -62,6 +62,8 @@ async function syncLocaleFromProfile(user) {
   profileLocale = data?.locale ?? null;
   if (profileLocale && profileLocale !== getLocale() && ENABLED_LOCALES.includes(profileLocale)) {
     await setLocale(profileLocale);
+    const url = staticPageUrl(profileLocale);
+    if (url) location.replace(url);
   }
 }
 

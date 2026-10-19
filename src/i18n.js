@@ -60,17 +60,33 @@ export async function setLocale(code, { persist = true } = {}) {
   document.documentElement.lang = code;
   if (persist) writeStored(code);
   applyTranslations();
-  listeners.forEach((fn) => fn(code));
+  await Promise.all([...listeners].map((fn) => fn(code)));
 }
 
-// Called when the user changes language (step 3 uses this to save profiles.locale).
+// Called when the language changes (auth.js saves it to profiles.locale). May be async.
 export function onLocaleChange(fn) {
   listeners.add(fn);
   return () => listeners.delete(fn);
 }
 
+// On pre-rendered static pages: the URL of the same page in `code`, else null.
+export function staticPageUrl(code) {
+  if (!document.documentElement.dataset.staticLocale) return null;
+  const alt = document.querySelector(`link[rel="alternate"][hreflang="${code}"]`);
+  // Strip the origin by hand: the configured domain may be a placeholder that URL() rejects.
+  return alt ? alt.getAttribute('href').replace(/^https?:\/\/[^/]+/, '') + location.hash : null;
+}
+
 export async function initI18n() {
   fallbackMessages = await load(DEFAULT_LOCALE);
+
+  // Pre-rendered static pages (/, /en/, /uk/…) are already in their language.
+  const staticLocale = document.documentElement.dataset.staticLocale;
+  if (staticLocale) {
+    await setLocale(staticLocale, { persist: false });
+    return;
+  }
+
   const requested = new URLSearchParams(location.search).get('lang');
   const code = resolveLocale({
     requested,

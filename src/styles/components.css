@@ -79,7 +79,8 @@
 .btn--secondary { background: var(--c-surface); color: var(--c-primary); border-color: var(--c-primary); }
 
 /* Hero */
-.hero { padding-block: var(--space-12) var(--space-8); max-width: 42rem; }
+.hero { padding-block: var(--space-12) var(--space-8); }
+.hero > * { max-width: 42rem; }
 .lead { font-size: 1.15rem; color: var(--c-muted); }
 
 /* Dev-only banner (src/dev-warnings.js) */

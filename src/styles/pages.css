@@ -1,0 +1,113 @@
+/* Landing + content pages */
+.section { padding-block: var(--space-12); }
+.section--tint { background: #eef4f1; }
+.container--text { max-width: 46rem; }
+
+.eyebrow {
+  margin-bottom: var(--space-2);
+  color: var(--c-primary);
+  font-weight: 700;
+  font-size: var(--fs-small);
+}
+.hero__actions { margin-block: var(--space-6) var(--space-2); }
+.btn--large { min-height: 56px; padding-inline: var(--space-8); font-size: 1.1rem; }
+
+.cards { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: grid; gap: var(--space-4); }
+@media (min-width: 40rem) { .cards--4, .cards--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) {
+  .cards--4 { grid-template-columns: repeat(4, 1fr); }
+  .cards--3 { grid-template-columns: repeat(3, 1fr); }
+}
+.card {
+  padding: var(--space-6);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+}
+.card h3 { font-size: 1.15rem; margin-bottom: var(--space-2); }
+.card p:last-child { margin-bottom: 0; }
+
+.split { display: grid; gap: var(--space-8); align-items: center; }
+@media (min-width: 52rem) { .split { grid-template-columns: 1fr 1fr; } }
+
+.example {
+  margin: 0;
+  padding: var(--space-6);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+}
+.example__title { font-weight: 700; margin-bottom: var(--space-4); }
+.example__caption { font-weight: 600; margin-top: var(--space-2); }
+.example .muted { margin: var(--space-4) 0 0; }
+
+.steps { list-style: none; counter-reset: step; margin: var(--space-6) 0 0; padding: 0; display: grid; gap: var(--space-6); }
+@media (min-width: 52rem) { .steps { grid-template-columns: repeat(3, 1fr); } }
+.steps li { counter-increment: step; position: relative; padding-left: 3.25rem; }
+.steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 0;
+  width: 2.25rem; height: 2.25rem;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--c-primary); color: var(--c-on-primary);
+  font-weight: 700;
+}
+.steps h3 { font-size: 1.15rem; margin-bottom: var(--space-2); }
+
+/* Pricing */
+.price-card { display: flex; flex-direction: column; gap: var(--space-3); }
+.price-card .btn { margin-top: auto; }
+.price-card--featured { border: 2px solid var(--c-primary); }
+.price { font-size: 2rem; font-weight: 700; margin: 0; }
+.price__unit { font-size: var(--fs-small); font-weight: 400; color: var(--c-muted); }
+.badge {
+  align-self: flex-start;
+  margin: 0;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--c-primary); color: var(--c-on-primary);
+  font-size: var(--fs-small); font-weight: 600;
+}
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.checklist li { position: relative; padding-left: 1.75rem; }
+.checklist li::before {
+  content: "✓";
+  position: absolute; left: 0;
+  color: var(--c-pass); font-weight: 700;
+}
+
+/* FAQ */
+.faq { display: grid; gap: var(--space-2); margin-top: var(--space-6); }
+.faq details {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+}
+.faq summary {
+  min-height: var(--tap);
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  cursor: pointer;
+}
+.faq details > p { padding: 0 var(--space-4); }
+.faq details > p:last-child { padding-bottom: var(--space-4); margin-bottom: 0; }
+
+.cta-band { text-align: center; background: #e2efe9; }
+.cta-band .btn { margin-top: var(--space-2); }
+
+/* Long-form documents (legal, exam guide) */
+.prose { max-width: 46rem; padding-block: var(--space-8); }
+.prose h2 { margin-top: var(--space-8); }
+.prose h3 { margin-top: var(--space-6); font-size: 1.15rem; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin: 0 0 var(--space-4); }
+.prose li + li { margin-top: var(--space-1); }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: var(--space-4); font-size: var(--fs-small); }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: var(--space-2); border-bottom: 1px solid var(--c-border); }
+.table-wrap { overflow-x: auto; }
+.draft-note {
+  padding: var(--space-3) var(--space-4);
+  background: #fff4ce;
+  border-left: 4px solid var(--c-borderline);
+  border-radius: var(--radius);
+}

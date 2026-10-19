@@ -1,0 +1,54 @@
+/* Per-skill score bars with the 60% pass line. Used on the landing page
+   (static example) and on results pages (width set from JS via
+   el.style.setProperty('--pct', …), which the CSP allows). */
+.skill-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
+
+.skill-bar {
+  --pct: 0;
+  --bar-color: var(--c-muted);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "name pct" "track track" "status status";
+  gap: var(--space-1) var(--space-3);
+}
+.skill-bar.is-pass, .skill-bar.is-likely_pass { --bar-color: var(--c-pass); }
+.skill-bar.is-borderline { --bar-color: var(--c-borderline); }
+.skill-bar.is-fail, .skill-bar.is-likely_fail { --bar-color: var(--c-fail); }
+
+.skill-bar__name { grid-area: name; font-weight: 600; }
+.skill-bar__pct { grid-area: pct; font-variant-numeric: tabular-nums; font-weight: 700; }
+.skill-bar__status { grid-area: status; color: var(--bar-color); font-size: var(--fs-small); font-weight: 600; }
+
+.skill-bar__track {
+  grid-area: track;
+  position: relative;
+  height: 14px;
+  border-radius: 7px;
+  background: #e6e9e6;
+  overflow: visible;
+}
+.skill-bar__fill {
+  display: block;
+  height: 100%;
+  width: calc(var(--pct) * 1%);
+  border-radius: inherit;
+  background: var(--bar-color);
+}
+/* The 60% line */
+.skill-bar__track::after {
+  content: "";
+  position: absolute;
+  left: var(--pass-line, 60%);
+  top: -4px;
+  bottom: -4px;
+  width: 3px;
+  margin-left: -1px;
+  background: var(--c-text);
+  border-radius: 2px;
+}
+
+/* Static example values (landing page) */
+.skill-bar[data-pct="55"] { --pct: 55; }
+.skill-bar[data-pct="75"] { --pct: 75; }
+.skill-bar[data-pct="85"] { --pct: 85; }
+.skill-bar[data-pct="90"] { --pct: 90; }

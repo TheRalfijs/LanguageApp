@@ -32,10 +32,32 @@ npm run preview  # serve dist/ at http://localhost:4173 (service worker active h
 ## Languages
 
 - Latvian text is written inline in the HTML (`data-i18n="key"`), so pages render without JS.
-  Other languages are applied at runtime. The choice is stored in `localStorage` (and in
-  `profiles.locale` once the user is logged in — step 3). `?lang=en` forces a language.
+- **Static pages** (`<html data-static>`: landing, terms, privacy, exam guide) are
+  **pre-rendered per language** at build time: `/`, `/en/`, `/uk/` (+ `hreflang`, canonical,
+  `sitemap.xml`, `robots.txt`). In static pages, `data-i18n` elements must contain plain text
+  only (the build fails otherwise). Long texts live in `content/<name>.<locale>.html` and are
+  pulled in with `<!-- @content name -->`.
+- **App pages** (login, diagnostic, account…) translate at runtime. Links from a static page
+  carry `?lang=xx`, so the choice follows the user.
+- The choice is stored in `localStorage` and in `profiles.locale` when logged in. A visitor
+  with a stored choice who opens a static page in another language is redirected to their
+  language (`public/locale-redirect.js`); search engines have no stored choice.
 - **Turn a language on/off:** edit `ENABLED_LOCALES` in `config/app.json`. Disabled locales
-  are not included in the build at all. `ru` is currently off.
+  are not built at all (no `/ru/` pages, no `ru.json` in the bundle). `ru` is currently off.
+  Turning a locale on also needs its `content/**/<name>.<locale>.html` files (a test checks).
+
+## Placeholders to fill before launch
+
+Search the repo for these tokens:
+
+| Token | Where | What |
+|---|---|---|
+| `[BRAND]`, `[DOMAIN]` | `config/app.json`, `public/manifest.webmanifest` | Product name and domain |
+| `[COMPANY]`, `[REG_NO]`, `[ADDRESS]`, `[EMAIL]`, `[VAT_STATUS]` | `content/legal/*` | Legal entity details |
+| `[LAUNCH_DATE]`, `[DATE]` | locales, `content/legal/*` | Planned launch, "last updated" |
+| `[CHECK VIAA]`, `[VIAA_URL]` | `content/legal/exam-guide.*` | Exam facts to verify on the VIAA site |
+| `[CHECK]`, `[CHECK: …]` | `content/legal/*` | Legal/processor facts to verify |
+| `[DRAFT]` | top of each legal page | Remove the whole notice after legal review |
 
 ## Branding placeholders
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="lv">
+<html lang="lv" data-static>
 <head>
   <!-- @include head -->
   <title data-i18n="meta.title">{{brand}} — B1 valsts valodas pārbaudes treniņš</title>
@@ -7,13 +7,188 @@
 </head>
 <body>
   <!-- @include header -->
-  <main id="main" class="container">
-    <!-- Full landing page (who it's for, 60% rule, pricing, FAQ) is built in step 4. -->
-    <section class="hero">
+  <main id="main">
+
+    <section class="hero container">
+      <p class="eyebrow" data-i18n="home.eyebrow">B1 valsts valodas prasmes pārbaude</p>
       <h1 data-i18n="home.headline">Uzzini, vai šodien nokārtotu B1 eksāmenu</h1>
       <p class="lead" data-i18n="home.lead">Bezmaksas 15 minūšu tests parāda aptuvenu rezultātu katrā no četrām prasmēm un to, kura jāuzlabo vispirms.</p>
-      <a class="btn btn--primary" href="/pages/diagnostic.html" data-i18n="home.cta">Sākt bezmaksas testu</a>
+      <p class="hero__actions">
+        <a class="btn btn--primary btn--large" href="/pages/diagnostic.html" data-i18n="home.cta">Sākt bezmaksas testu</a>
+      </p>
+      <p class="muted" data-i18n="home.ctaNote">Bez reģistrācijas · apmēram 15 minūtes · bez maksas</p>
     </section>
+
+    <section class="section container" aria-labelledby="who-title">
+      <h2 id="who-title" data-i18n="landing.who.title">Kam tas paredzēts</h2>
+      <ul class="cards cards--4">
+        <li class="card">
+          <h3 data-i18n="landing.who.workTitle">Darbam vajag B1</h3>
+          <p data-i18n="landing.who.workBody">Tirdzniecībā, apkalpošanā un citos darbos ar klientiem bieži prasa B1 līmeņa valsts valodas prasmi.</p>
+        </li>
+        <li class="card">
+          <h3 data-i18n="landing.who.ukraineTitle">Ukrainas iedzīvotājiem</h3>
+          <p data-i18n="landing.who.ukraineBody">Saskarne un paskaidrojumi ukraiņu valodā, uzdevumi — latviski, kā eksāmenā.</p>
+        </li>
+        <li class="card">
+          <h3 data-i18n="landing.who.residentsTitle">Citvalstu iedzīvotājiem</h3>
+          <p data-i18n="landing.who.residentsBody">Paskaidrojumi angliski, kamēr latviešu valoda vēl nav pietiekami droša.</p>
+        </li>
+        <li class="card">
+          <h3 data-i18n="landing.who.busyTitle">Aizņemtiem cilvēkiem</h3>
+          <p data-i18n="landing.who.busyBody">Darbojas telefonā. Īsi uzdevumi, ko var pildīt pārtraukumā.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="rule-title">
+      <div class="container split">
+        <div>
+          <h2 id="rule-title" data-i18n="landing.rule.title">Kā darbojas 60% noteikums</h2>
+          <p data-i18n="landing.rule.body">Eksāmenā ir četras daļas: klausīšanās, lasīšana, rakstīšana un runāšana. Lai to nokārtotu, katrā daļā jāiegūst vismaz 60% no maksimālā punktu skaita. Spēcīga daļa nevar kompensēt vāju.</p>
+          <p data-i18n="landing.rule.outro">Tāpēc mēs rādām rezultātu katrā prasmē atsevišķi un palīdzam vispirms uzlabot vājāko.</p>
+        </div>
+        <figure class="example">
+          <p class="example__title" data-i18n="landing.rule.exampleTitle">Piemērs</p>
+          <ul class="skill-bars">
+            <li class="skill-bar is-pass" data-pct="85">
+              <span class="skill-bar__name" data-i18n="skills.listening">Klausīšanās</span>
+              <span class="skill-bar__pct">85%</span>
+              <span class="skill-bar__track" aria-hidden="true"><span class="skill-bar__fill"></span></span>
+              <span class="skill-bar__status" data-i18n="status.pass">Nokārtots</span>
+            </li>
+            <li class="skill-bar is-pass" data-pct="90">
+              <span class="skill-bar__name" data-i18n="skills.reading">Lasīšana</span>
+              <span class="skill-bar__pct">90%</span>
+              <span class="skill-bar__track" aria-hidden="true"><span class="skill-bar__fill"></span></span>
+              <span class="skill-bar__status" data-i18n="status.pass">Nokārtots</span>
+            </li>
+            <li class="skill-bar is-pass" data-pct="75">
+              <span class="skill-bar__name" data-i18n="skills.writing">Rakstīšana</span>
+              <span class="skill-bar__pct">75%</span>
+              <span class="skill-bar__track" aria-hidden="true"><span class="skill-bar__fill"></span></span>
+              <span class="skill-bar__status" data-i18n="status.pass">Nokārtots</span>
+            </li>
+            <li class="skill-bar is-fail" data-pct="55">
+              <span class="skill-bar__name" data-i18n="skills.speaking">Runāšana</span>
+              <span class="skill-bar__pct">55%</span>
+              <span class="skill-bar__track" aria-hidden="true"><span class="skill-bar__fill"></span></span>
+              <span class="skill-bar__status" data-i18n="status.fail">Nav nokārtots</span>
+            </li>
+          </ul>
+          <p class="muted" data-i18n="landing.rule.lineLabel">Vertikālā līnija — 60% robeža</p>
+          <figcaption class="example__caption" data-i18n="landing.rule.exampleCaption">Vidēji 76%, bet eksāmens nav nokārtots: runāšana ir zem 60%.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="how-title">
+      <h2 id="how-title" data-i18n="landing.how.title">Kā tas notiek</h2>
+      <ol class="steps">
+        <li>
+          <h3 data-i18n="landing.how.step1Title">Pildi bezmaksas testu</h3>
+          <p data-i18n="landing.how.step1Body">4 lasīšanas un 4 klausīšanās jautājumi, īss teksts (60–80 vārdi) un 1 minūtes mutiska atbilde.</p>
+        </li>
+        <li>
+          <h3 data-i18n="landing.how.step2Title">Redzi rezultātu katrā prasmē</h3>
+          <p data-i18n="landing.how.step2Body">Aptuvens procents pret 60% robežu: visticamāk nokārtotu, uz robežas vai visticamāk nenokārtotu.</p>
+        </li>
+        <li>
+          <h3 data-i18n="landing.how.step3Title">Uzzini, ko uzlabot vispirms</h3>
+          <p data-i18n="landing.how.step3Body">Rakstīšanai un runāšanai — vērtējums pa kritērijiem un tavas konkrētās kļūdas ar labojumiem.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section section--tint" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title" data-i18n="landing.pricing.title">Cenas</h2>
+        <p data-i18n="landing.pricing.note">Vienreizēji maksājumi. Bez abonementa un automātiskas atjaunošanas.</p>
+        <ul class="cards cards--3 pricing">
+          <li class="card price-card">
+            <h3 data-i18n="landing.pricing.freeName">Bezmaksas tests</h3>
+            <p class="price"><span data-i18n="landing.pricing.freePrice">0 €</span></p>
+            <ul class="checklist">
+              <li data-i18n="landing.pricing.freeF1">Visas četras prasmes, ~15 minūtes</li>
+              <li data-i18n="landing.pricing.freeF2">Aptuvens rezultāts katrā prasmē</li>
+              <li data-i18n="landing.pricing.freeF3">Bez konta līdz rezultātiem</li>
+            </ul>
+            <a class="btn btn--secondary" href="/pages/diagnostic.html" data-i18n="landing.pricing.freeCta">Sākt testu</a>
+          </li>
+          <li class="card price-card">
+            <h3 data-i18n="landing.pricing.essayName">Rakstīšanas darba pārbaude</h3>
+            <p class="price"><span data-i18n="landing.pricing.essayPrice">5 €</span> <span class="price__unit" data-i18n="landing.pricing.essayUnit">par vienu darbu</span></p>
+            <ul class="checklist">
+              <li data-i18n="landing.pricing.essayF1">B1 rakstīšanas uzdevums ar taimeri un vārdu skaitītāju</li>
+              <li data-i18n="landing.pricing.essayF2">Vērtējums pa eksāmena kritērijiem</li>
+              <li data-i18n="landing.pricing.essayF3">Katra kļūda ar labojumu un paskaidrojumu</li>
+            </ul>
+            <p class="muted" data-i18n="landing.pricing.essayReview">Pašlaik katru darbu pārskata arī cilvēks — atbilde 48 stundu laikā.</p>
+            <a class="btn btn--secondary" href="/pages/essay.html" data-i18n="landing.pricing.essayCta">Pārbaudīt darbu</a>
+          </li>
+          <li class="card price-card price-card--featured">
+            <p class="badge" data-i18n="landing.pricing.foundingBadge">Ierobežots piedāvājums</p>
+            <h3 data-i18n="landing.pricing.foundingName">Dibinātāja pase</h3>
+            <p class="price"><span data-i18n="landing.pricing.foundingPrice">29 €</span> <span class="price__unit" data-i18n="landing.pricing.foundingUnit">vienreizēji</span></p>
+            <ul class="checklist">
+              <li data-i18n="landing.pricing.foundingF1">90 dienu pilna B1 piekļuve, kad atvērsim pilno versiju</li>
+              <li data-i18n="landing.pricing.foundingF2">Prakse visās četrās prasmēs un pilni izmēģinājuma eksāmeni</li>
+              <li data-i18n="landing.pricing.foundingF3">Līdz palaišanai atmaksāsim pēc pieprasījuma</li>
+            </ul>
+            <p class="muted" data-i18n="landing.pricing.foundingLaunch">Plānotā palaišana: [LAUNCH_DATE]</p>
+            <a class="btn btn--primary" href="/pages/founding-pass.html" data-i18n="landing.pricing.foundingCta">Rezervēt par 29 €</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section container container--text" aria-labelledby="faq-title">
+      <h2 id="faq-title" data-i18n="landing.faq.title">Biežāk uzdotie jautājumi</h2>
+      <div class="faq">
+        <details>
+          <summary data-i18n="landing.faq.q1">Vai šis ir VIAA tests?</summary>
+          <p data-i18n="landing.faq.a1">Nē. Šī ir neatkarīga mācību platforma, kas nav saistīta ar VIAA. Visi uzdevumi ir oriģināli un veidoti pēc eksāmena uzdevumu formāta.</p>
+        </details>
+        <details>
+          <summary data-i18n="landing.faq.q2">Cik precīzs ir rezultāts?</summary>
+          <p data-i18n="landing.faq.a2">Tas ir aptuvens novērtējums, nevis eksāmena rezultāts. Bezmaksas tests ir īss, tāpēc tas labāk parāda, kura prasme ir vājākā, nekā precīzu punktu skaitu.</p>
+        </details>
+        <details>
+          <summary data-i18n="landing.faq.q3">Kā tiek vērtēta rakstīšana un runāšana?</summary>
+          <p data-i18n="landing.faq.a3">Mākslīgais intelekts vērtē pēc eksāmena kritērijiem. Mēs regulāri salīdzinām tā vērtējumus ar kvalificēta skolotāja vērtējumiem. Runāšanā vērtējam, ko tu pateici; izrunas vērtējums ir tikai aptuvens.</p>
+        </details>
+        <details>
+          <summary data-i18n="landing.faq.q4">Kādā valodā ir uzdevumi?</summary>
+          <p data-i18n="landing.faq.a4">Uzdevumi vienmēr ir latviešu valodā, kā eksāmenā. Paskaidrojumi un atgriezeniskā saite ir tevis izvēlētajā valodā: latviešu, angļu vai ukraiņu.</p>
+        </details>
+        <details>
+          <summary data-i18n="landing.faq.q5">Vai man vajag kontu?</summary>
+          <p data-i18n="landing.faq.a5">Bezmaksas testu var sākt bez konta. Lai redzētu pilnu atgriezenisko saiti, ievadi e-pastu, un mēs nosūtīsim pieteikšanās saiti. Parole nav vajadzīga.</p>
+        </details>
+        <details>
+          <summary data-i18n="landing.faq.q6">Kas notiek ar maniem ierakstiem?</summary>
+          <p data-i18n="landing.faq.a6">Runāšanas ieraksti tiek automātiski dzēsti pēc 30 dienām. Savu kontu un visus datus vari dzēst jebkurā laikā.</p>
+        </details>
+        <details>
+          <summary data-i18n="landing.faq.q7">Vai varu atgūt naudu par dibinātāja pasi?</summary>
+          <p data-i18n="landing.faq.a7">Jā. Līdz pilnās versijas palaišanai atmaksāsim visu summu pēc pieprasījuma: konta sadaļā spied “Atteikties no līguma” vai raksti mums.</p>
+        </details>
+        <details>
+          <summary data-i18n="landing.faq.q8">Kā pieteikties eksāmenam?</summary>
+          <p data-i18n="landing.faq.a8">Eksāmenu organizē valsts iestāde, nevis mēs. Mūsu eksāmena ceļvedī ir apkopots, kā pieteikties, cik tas maksā un kad būs rezultāti.</p>
+          <p><a href="/pages/legal/exam-guide.html" data-i18n="landing.faq.guideLink">Atvērt eksāmena ceļvedi</a></p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section cta-band" aria-labelledby="final-title">
+      <div class="container">
+        <h2 id="final-title" data-i18n="landing.final.title">Uzzini, kur tu esi šodien</h2>
+        <p data-i18n="landing.final.body">15 minūtes, bez maksas, bez reģistrācijas.</p>
+        <a class="btn btn--primary btn--large" href="/pages/diagnostic.html" data-i18n="home.cta">Sākt bezmaksas testu</a>
+      </div>
+    </section>
+
   </main>
   <!-- @include footer -->
 </body>

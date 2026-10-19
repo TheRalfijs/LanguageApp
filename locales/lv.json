@@ -18,7 +18,9 @@
   "home": {
     "headline": "Uzzini, vai šodien nokārtotu B1 eksāmenu",
     "lead": "Bezmaksas 15 minūšu tests parāda aptuvenu rezultātu katrā no četrām prasmēm un to, kura jāuzlabo vispirms.",
-    "cta": "Sākt bezmaksas testu"
+    "cta": "Sākt bezmaksas testu",
+    "eyebrow": "B1 valsts valodas prasmes pārbaude",
+    "ctaNote": "Bez reģistrācijas · apmēram 15 minūtes · bez maksas"
   },
   "notFound": {
     "title": "Lapa nav atrasta",
@@ -67,6 +69,95 @@
     "title": "Konts",
     "signedInAs": "Tu esi pieteicies kā {email}.",
     "signOut": "Iziet"
+  },
+  "landing": {
+    "who": {
+      "title": "Kam tas paredzēts",
+      "workTitle": "Darbam vajag B1",
+      "workBody": "Tirdzniecībā, apkalpošanā un citos darbos ar klientiem bieži prasa B1 līmeņa valsts valodas prasmi.",
+      "ukraineTitle": "Ukrainas iedzīvotājiem",
+      "ukraineBody": "Saskarne un paskaidrojumi ukraiņu valodā, uzdevumi — latviski, kā eksāmenā.",
+      "residentsTitle": "Citvalstu iedzīvotājiem",
+      "residentsBody": "Paskaidrojumi angliski, kamēr latviešu valoda vēl nav pietiekami droša.",
+      "busyTitle": "Aizņemtiem cilvēkiem",
+      "busyBody": "Darbojas telefonā. Īsi uzdevumi, ko var pildīt pārtraukumā."
+    },
+    "rule": {
+      "title": "Kā darbojas 60% noteikums",
+      "body": "Eksāmenā ir četras daļas: klausīšanās, lasīšana, rakstīšana un runāšana. Lai to nokārtotu, katrā daļā jāiegūst vismaz 60% no maksimālā punktu skaita. Spēcīga daļa nevar kompensēt vāju.",
+      "exampleTitle": "Piemērs",
+      "exampleCaption": "Vidēji 76%, bet eksāmens nav nokārtots: runāšana ir zem 60%.",
+      "lineLabel": "Vertikālā līnija — 60% robeža",
+      "outro": "Tāpēc mēs rādām rezultātu katrā prasmē atsevišķi un palīdzam vispirms uzlabot vājāko."
+    },
+    "how": {
+      "title": "Kā tas notiek",
+      "step1Title": "Pildi bezmaksas testu",
+      "step1Body": "4 lasīšanas un 4 klausīšanās jautājumi, īss teksts (60–80 vārdi) un 1 minūtes mutiska atbilde.",
+      "step2Title": "Redzi rezultātu katrā prasmē",
+      "step2Body": "Aptuvens procents pret 60% robežu: visticamāk nokārtotu, uz robežas vai visticamāk nenokārtotu.",
+      "step3Title": "Uzzini, ko uzlabot vispirms",
+      "step3Body": "Rakstīšanai un runāšanai — vērtējums pa kritērijiem un tavas konkrētās kļūdas ar labojumiem."
+    },
+    "pricing": {
+      "title": "Cenas",
+      "note": "Vienreizēji maksājumi. Bez abonementa un automātiskas atjaunošanas.",
+      "freeName": "Bezmaksas tests",
+      "freePrice": "0 €",
+      "freeF1": "Visas četras prasmes, ~15 minūtes",
+      "freeF2": "Aptuvens rezultāts katrā prasmē",
+      "freeF3": "Bez konta līdz rezultātiem",
+      "freeCta": "Sākt testu",
+      "essayName": "Rakstīšanas darba pārbaude",
+      "essayPrice": "5 €",
+      "essayUnit": "par vienu darbu",
+      "essayF1": "B1 rakstīšanas uzdevums ar taimeri un vārdu skaitītāju",
+      "essayF2": "Vērtējums pa eksāmena kritērijiem",
+      "essayF3": "Katra kļūda ar labojumu un paskaidrojumu",
+      "essayReview": "Pašlaik katru darbu pārskata arī cilvēks — atbilde 48 stundu laikā.",
+      "essayCta": "Pārbaudīt darbu",
+      "foundingBadge": "Ierobežots piedāvājums",
+      "foundingName": "Dibinātāja pase",
+      "foundingPrice": "29 €",
+      "foundingUnit": "vienreizēji",
+      "foundingF1": "90 dienu pilna B1 piekļuve, kad atvērsim pilno versiju",
+      "foundingF2": "Prakse visās četrās prasmēs un pilni izmēģinājuma eksāmeni",
+      "foundingF3": "Līdz palaišanai atmaksāsim pēc pieprasījuma",
+      "foundingLaunch": "Plānotā palaišana: [LAUNCH_DATE]",
+      "foundingCta": "Rezervēt par 29 €"
+    },
+    "faq": {
+      "title": "Biežāk uzdotie jautājumi",
+      "q1": "Vai šis ir VIAA tests?",
+      "a1": "Nē. Šī ir neatkarīga mācību platforma, kas nav saistīta ar VIAA. Visi uzdevumi ir oriģināli un veidoti pēc eksāmena uzdevumu formāta.",
+      "q2": "Cik precīzs ir rezultāts?",
+      "a2": "Tas ir aptuvens novērtējums, nevis eksāmena rezultāts. Bezmaksas tests ir īss, tāpēc tas labāk parāda, kura prasme ir vājākā, nekā precīzu punktu skaitu.",
+      "q3": "Kā tiek vērtēta rakstīšana un runāšana?",
+      "a3": "Mākslīgais intelekts vērtē pēc eksāmena kritērijiem. Mēs regulāri salīdzinām tā vērtējumus ar kvalificēta skolotāja vērtējumiem. Runāšanā vērtējam, ko tu pateici; izrunas vērtējums ir tikai aptuvens.",
+      "q4": "Kādā valodā ir uzdevumi?",
+      "a4": "Uzdevumi vienmēr ir latviešu valodā, kā eksāmenā. Paskaidrojumi un atgriezeniskā saite ir tevis izvēlētajā valodā: latviešu, angļu vai ukraiņu.",
+      "q5": "Vai man vajag kontu?",
+      "a5": "Bezmaksas testu var sākt bez konta. Lai redzētu pilnu atgriezenisko saiti, ievadi e-pastu, un mēs nosūtīsim pieteikšanās saiti. Parole nav vajadzīga.",
+      "q6": "Kas notiek ar maniem ierakstiem?",
+      "a6": "Runāšanas ieraksti tiek automātiski dzēsti pēc 30 dienām. Savu kontu un visus datus vari dzēst jebkurā laikā.",
+      "q7": "Vai varu atgūt naudu par dibinātāja pasi?",
+      "a7": "Jā. Līdz pilnās versijas palaišanai atmaksāsim visu summu pēc pieprasījuma: konta sadaļā spied “Atteikties no līguma” vai raksti mums.",
+      "q8": "Kā pieteikties eksāmenam?",
+      "a8": "Eksāmenu organizē valsts iestāde, nevis mēs. Mūsu eksāmena ceļvedī ir apkopots, kā pieteikties, cik tas maksā un kad būs rezultāti.",
+      "guideLink": "Atvērt eksāmena ceļvedi"
+    },
+    "final": {
+      "title": "Uzzini, kur tu esi šodien",
+      "body": "15 minūtes, bez maksas, bez reģistrācijas."
+    }
+  },
+  "legal": {
+    "termsTitle": "Lietošanas noteikumi",
+    "termsDescription": "{brand} lietošanas noteikumi: pakalpojums, cenas, atteikuma tiesības.",
+    "privacyTitle": "Privātuma politika",
+    "privacyDescription": "Kā {brand} apstrādā tavus datus, ierakstus un tekstus.",
+    "guideTitle": "Eksāmena ceļvedis",
+    "guideDescription": "Valsts valodas prasmes pārbaude B1: pieteikšanās, maksa, norise un rezultāti."
   },
   "footer": {
     "disclaimer": "Neatkarīga mācību platforma. Nav saistīta ar VIAA.",
