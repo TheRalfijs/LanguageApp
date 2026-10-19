@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "{brand} — Latvian B1 language test practice",
+    "description": "Find out if you would pass the Latvian B1 state language test today, and fix your weakest skill."
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "language": "Language",
+    "mainNav": "Main navigation"
+  },
+  "nav": {
+    "home": "Home",
+    "diagnostic": "Free test",
+    "examGuide": "About the exam",
+    "login": "Log in",
+    "account": "Account"
+  },
+  "home": {
+    "headline": "Find out if you would pass B1 today",
+    "lead": "A free 15-minute test shows an approximate score for each of the four skills, and which one to fix first.",
+    "cta": "Start the free test"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This page doesn't exist. Go back to the home page."
+  },
+  "common": {
+    "backHome": "Back to home",
+    "loading": "Loading…"
+  },
+  "footer": {
+    "disclaimer": "Independent learning platform. Not affiliated with VIAA.",
+    "terms": "Terms of service",
+    "privacy": "Privacy policy",
+    "examGuide": "Exam guide"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "{brand} — B1 valsts valodas pārbaudes treniņš",
+    "description": "Uzzini, vai šodien nokārtotu B1 latviešu valodas prasmes pārbaudi, un uzlabo savu vājāko prasmi."
+  },
+  "a11y": {
+    "skipToContent": "Pāriet uz saturu",
+    "language": "Valoda",
+    "mainNav": "Galvenā navigācija"
+  },
+  "nav": {
+    "home": "Sākums",
+    "diagnostic": "Bezmaksas tests",
+    "examGuide": "Par eksāmenu",
+    "login": "Ieiet",
+    "account": "Konts"
+  },
+  "home": {
+    "headline": "Uzzini, vai šodien nokārtotu B1 eksāmenu",
+    "lead": "Bezmaksas 15 minūšu tests parāda aptuvenu rezultātu katrā no četrām prasmēm un to, kura jāuzlabo vispirms.",
+    "cta": "Sākt bezmaksas testu"
+  },
+  "notFound": {
+    "title": "Lapa nav atrasta",
+    "body": "Šādas lapas nav. Atgriezies sākumlapā."
+  },
+  "common": {
+    "backHome": "Uz sākumlapu",
+    "loading": "Ielādē…"
+  },
+  "footer": {
+    "disclaimer": "Neatkarīga mācību platforma. Nav saistīta ar VIAA.",
+    "terms": "Lietošanas noteikumi",
+    "privacy": "Privātuma politika",
+    "examGuide": "Eksāmena ceļvedis"
+  }
+}

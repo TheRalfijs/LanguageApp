@@ -1,0 +1,9 @@
+{
+  "brand": "[BRAND]",
+  "domain": "[DOMAIN]",
+  "DEFAULT_LOCALE": "lv",
+  "ENABLED_LOCALES": ["lv", "en", "uk"],
+  "localeNames": { "lv": "Latviešu", "en": "English", "uk": "Українська", "ru": "Русский" },
+  "defaultExam": "lv-b1",
+  "currency": "eur"
+}
