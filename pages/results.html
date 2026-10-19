@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <!-- @include head -->
+  <title data-i18n="results.title">Tavs rezultāts</title>
+  <meta name="robots" content="noindex">
+  <script type="module" src="/src/pages/results.js"></script>
+</head>
+<body>
+  <!-- @include header -->
+  <main id="main" class="container container--narrow">
+    <h1 data-i18n="results.title">Tavs rezultāts</h1>
+    <p class="badge badge--muted" data-i18n="results.approximate">Aptuvens novērtējums</p>
+
+    <div id="results-progress" role="status" aria-live="polite">
+      <p class="lead" data-i18n="results.grading">Vērtējam tavas atbildes… Tas aizņem līdz minūtei.</p>
+    </div>
+    <p class="alert alert--error" id="results-error" role="alert" hidden></p>
+
+    <section id="results-summary" hidden>
+      <div id="skill-bars"></div>
+      <p class="muted" data-i18n="results.lineNote">Vertikālā līnija — 60% robeža. Eksāmenā katrā prasmē jāiegūst vismaz 60%.</p>
+      <p class="results-verdict" id="results-verdict"></p>
+      <p class="muted" data-i18n="results.disclaimer">Šis ir aptuvens novērtējums pēc īsa testa, nevis eksāmena rezultāts.</p>
+      <div id="results-failed"></div>
+    </section>
+
+    <section id="results-gate" class="card stack" hidden>
+      <h2 data-i18n="results.gateTitle">Redzi pilnu atgriezenisko saiti</h2>
+      <p data-i18n="results.gateBody">Ievadi e-pastu, un mēs nosūtīsim pieteikšanās saiti. Redzēsi savas kļūdas, labojumus un vērtējumu pa kritērijiem.</p>
+      <div id="results-login"></div>
+    </section>
+
+    <section id="results-feedback" hidden></section>
+
+    <section id="results-next" class="card stack" hidden>
+      <h2 data-i18n="results.nextTitle">Ko darīt tālāk?</h2>
+      <p data-i18n="results.nextBody">Pilnā versija ar praksi visās četrās prasmēs un izmēģinājuma eksāmeniem būs pieejama drīzumā.</p>
+      <p><a class="btn btn--primary" href="/#pricing" data-i18n="results.nextCta">Apskatīt dibinātāja pasi</a></p>
+    </section>
+  </main>
+  <!-- @include footer -->
+</body>
+</html>

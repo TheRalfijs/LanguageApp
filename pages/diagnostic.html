@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <!-- @include head -->
+  <title data-i18n="diagnostic.title">Bezmaksas B1 tests</title>
+  <meta name="description" content="Bezmaksas 15 minūšu B1 tests: lasīšana, klausīšanās, rakstīšana un runāšana." data-i18n-attr="content:diagnostic.description">
+  <script type="module" src="/src/pages/diagnostic.js"></script>
+</head>
+<body>
+  <!-- @include header -->
+  <main id="main" class="container container--narrow">
+
+    <section id="diag-intro" class="stack">
+      <h1 data-i18n="diagnostic.title">Bezmaksas B1 tests</h1>
+      <p class="lead" data-i18n="diagnostic.intro">Apmēram 15 minūtes. Rezultātā redzēsi aptuvenu vērtējumu katrā prasmē.</p>
+      <ul class="checklist">
+        <li data-i18n="diagnostic.part.reading">4 lasīšanas jautājumi</li>
+        <li data-i18n="diagnostic.part.listening">4 klausīšanās jautājumi (vajadzīgas austiņas vai skaļrunis)</li>
+        <li data-i18n="diagnostic.part.writing">Īss teksts (60–80 vārdi)</li>
+        <li data-i18n="diagnostic.part.speaking">1 minūtes mutiska atbilde (vajadzīgs mikrofons)</li>
+      </ul>
+      <p class="muted" data-i18n="diagnostic.contentLanguage">Uzdevumi ir latviešu valodā, kā eksāmenā.</p>
+      <p class="muted" data-i18n="diagnostic.estimateNote">Šis ir aptuvens novērtējums, nevis eksāmena rezultāts.</p>
+      <p class="alert alert--error" id="diag-error" role="alert" hidden></p>
+      <button class="btn btn--primary btn--large" type="button" id="diag-start" data-i18n="diagnostic.start">Sākt testu</button>
+    </section>
+
+    <section id="diag-run" hidden>
+      <div class="diag-progress">
+        <p class="diag-progress__label" id="diag-step-label" aria-live="polite"></p>
+        <progress id="diag-progress" max="100" value="0"></progress>
+      </div>
+      <div id="diag-stage"></div>
+    </section>
+
+  </main>
+  <!-- @include footer -->
+</body>
+</html>

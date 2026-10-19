@@ -1,0 +1,187 @@
+{
+  "_note": "ORIGINAL seed items written for this app in the format of the B1 tasks (not copied from VIAA). MUST be reviewed by a qualified Latvian teacher before launch. TTS scripts write numbers and times as words so the voice reads them naturally.",
+  "exam_code": "lv-b1",
+  "items": [
+    {
+      "seed_id": "lv-b1-r1", "skill": "reading", "task_type": "reading_mcq",
+      "content_json": {
+        "text": { "title": "Paziņojums", "body": "Cienījamie pircēji! No 1. līdz 3. jūnijam veikals strādās no plkst. 10.00 līdz 18.00, jo notiks remonts. Svētdien, 4. jūnijā, veikals būs slēgts. No 5. jūnija atkal strādāsim kā parasti — katru dienu no plkst. 8.00 līdz 22.00. Atvainojamies par neērtībām!" },
+        "question": "Kad veikals būs slēgts?",
+        "options": ["2. jūnijā", "4. jūnijā", "5. jūnijā"]
+      },
+      "answer_key_json": { "correct": 1 }
+    },
+    {
+      "seed_id": "lv-b1-r2", "skill": "reading", "task_type": "reading_mcq",
+      "content_json": {
+        "text": { "title": "Īsziņa", "body": "Sveika, Laura! Šodien nevarēšu paņemt bērnus no bērnudārza, jo man līdz sešiem ir svarīga sapulce. Vai tu vari viņus paņemt? Es atbraukšu pēc viņiem pie tevis ap septiņiem. Paldies! Marta" },
+        "question": "Ko Marta lūdz Laurai?",
+        "options": ["Paņemt bērnus no bērnudārza", "Aiziet uz sapulci viņas vietā", "Atbraukt pie viņas septiņos"]
+      },
+      "answer_key_json": { "correct": 0 }
+    },
+    {
+      "seed_id": "lv-b1-r3", "skill": "reading", "task_type": "reading_mcq",
+      "content_json": {
+        "text": { "title": "Darba sludinājums", "body": "Kafejnīcai “Saulīte” Jūrmalā vajadzīgs pārdevējs-kasieris. Darbs maiņās, arī brīvdienās. Prasības: latviešu valoda B1 līmenī, pieredze darbā ar klientiem. Piedāvājam stabilu algu, apmācības un bezmaksas pusdienas. CV sūtiet līdz 15. maijam." },
+        "question": "Ko kafejnīca piedāvā darbiniekiem?",
+        "options": ["Darbu tikai darba dienās", "Dzīvokli Jūrmalā", "Bezmaksas pusdienas"]
+      },
+      "answer_key_json": { "correct": 2 }
+    },
+    {
+      "seed_id": "lv-b1-r4", "skill": "reading", "task_type": "reading_mcq",
+      "content_json": {
+        "text": { "title": "Bibliotēkas noteikumi", "body": "Grāmatas var paņemt uz trim nedēļām. Ja vēlaties grāmatu lasīt ilgāk, piezvaniet vai uzrakstiet e-pastu, un mēs pagarināsim termiņu vēl par divām nedēļām. Par katru nokavēto dienu jāmaksā 10 centi. Žurnālus uz mājām ņemt nevar — tos var lasīt tikai lasītavā." },
+        "question": "Ko nevar paņemt uz mājām?",
+        "options": ["Žurnālus", "Jaunas grāmatas", "Bērnu grāmatas"]
+      },
+      "answer_key_json": { "correct": 0 }
+    },
+    {
+      "seed_id": "lv-b1-r5", "skill": "reading", "task_type": "reading_mcq",
+      "content_json": {
+        "text": { "title": "Mājas iedzīvotājiem", "body": "Labdien! Otrdien, 12. martā, no plkst. 9.00 līdz 14.00 mājā nebūs karstā ūdens, jo strādnieki pagrabā mainīs caurules. Lūdzam šajā laikā neatstāt atvērtus ūdens krānus. Ja jums ir jautājumi, zvaniet mājas pārvaldniekam. Paldies par sapratni!" },
+        "question": "Kāpēc otrdien nebūs karstā ūdens?",
+        "options": ["Jo pārvaldnieks būs atvaļinājumā", "Jo iedzīvotāji nav samaksājuši rēķinus", "Jo pagrabā mainīs caurules"]
+      },
+      "answer_key_json": { "correct": 2 }
+    },
+    {
+      "seed_id": "lv-b1-r6", "skill": "reading", "task_type": "reading_mcq",
+      "content_json": {
+        "text": { "title": "Pilsētas svētki", "body": "Sestdien, 24. augustā, centrālajā laukumā. Plkst. 11.00 — bērnu rīts ar teātri un spēlēm. Plkst. 15.00 — vietējo amatnieku tirdziņš. Plkst. 20.00 — koncerts, ieeja bez maksas. Ja līs lietus, koncerts notiks kultūras namā." },
+        "question": "Kur notiks koncerts, ja būs slikts laiks?",
+        "options": ["Centrālajā laukumā", "Kultūras namā", "Amatnieku tirdziņā"]
+      },
+      "answer_key_json": { "correct": 1 }
+    },
+
+    {
+      "seed_id": "lv-b1-l1", "skill": "listening", "task_type": "listening_mcq",
+      "content_json": {
+        "audio": { "segments": [{ "voice": "female", "text": "Uzmanību! Vilciens uz Siguldu, kuram bija jāatiet pulksten četrpadsmitos divdesmit, kavējas apmēram piecpadsmit minūtes. Vilciens atiet no otrā perona. Atvainojamies par neērtībām." }] },
+        "question": "No kura perona atiet vilciens uz Siguldu?",
+        "options": ["No pirmā perona", "No otrā perona", "No trešā perona"]
+      },
+      "answer_key_json": { "correct": 1 }
+    },
+    {
+      "seed_id": "lv-b1-l2", "skill": "listening", "task_type": "listening_mcq",
+      "content_json": {
+        "audio": { "segments": [
+          { "voice": "female", "text": "Labdien! Ģimenes ārsta prakse, klausos." },
+          { "voice": "male", "text": "Labdien! Es gribētu pierakstīties pie ārstes Bērziņas. Man jau trīs dienas sāp kakls." },
+          { "voice": "female", "text": "Šodien ārste vairs nepieņem. Vai jums der rīt pulksten desmitos trīsdesmit?" },
+          { "voice": "male", "text": "Rīt no rīta es strādāju. Vai var pēcpusdienā?" },
+          { "voice": "female", "text": "Jā, rīt pulksten četros ir brīvs laiks." },
+          { "voice": "male", "text": "Labi, tas man der. Paldies!" }
+        ] },
+        "question": "Kad vīrietis ies pie ārstes?",
+        "options": ["Šodien pēcpusdienā", "Rīt plkst. 10.30", "Rīt plkst. 16.00"]
+      },
+      "answer_key_json": { "correct": 2 }
+    },
+    {
+      "seed_id": "lv-b1-l3", "skill": "listening", "task_type": "listening_mcq",
+      "content_json": {
+        "audio": { "segments": [{ "voice": "male", "text": "Sveika, Inese! Te Jānis. Es zvanu par sestdienu. Diemžēl uz kino aiziet nevarēšu, jo man jāstrādā. Varbūt aizejam svētdien? Piezvani man vakarā, lūdzu!" }] },
+        "question": "Kāpēc Jānis sestdien nevar iet uz kino?",
+        "options": ["Viņam jāstrādā", "Viņš ir slims", "Viņam nav naudas"]
+      },
+      "answer_key_json": { "correct": 0 }
+    },
+    {
+      "seed_id": "lv-b1-l4", "skill": "listening", "task_type": "listening_mcq",
+      "content_json": {
+        "audio": { "segments": [
+          { "voice": "female", "text": "Labdien! Vai varu jums palīdzēt?" },
+          { "voice": "male", "text": "Jā, es meklēju siltu jaku. Man vajag izmēru L." },
+          { "voice": "female", "text": "Šī zilā jaka ir L izmērā. Tā maksā sešdesmit piecus eiro, bet šonedēļ tai ir divdesmit procentu atlaide." },
+          { "voice": "male", "text": "Labi, es to ņemšu. Vai var maksāt ar karti?" },
+          { "voice": "female", "text": "Protams." }
+        ] },
+        "question": "Cik liela atlaide ir jakai?",
+        "options": ["10 %", "15 %", "20 %"]
+      },
+      "answer_key_json": { "correct": 2 }
+    },
+    {
+      "seed_id": "lv-b1-l5", "skill": "listening", "task_type": "listening_mcq",
+      "content_json": {
+        "audio": { "segments": [{ "voice": "male", "text": "Laika prognoze rītdienai. No rīta būs mākoņains, bet sauss laiks. Pēcpusdienā valsts rietumos sāks līt, un vakarā lietus būs visā Latvijā. Gaisa temperatūra — no divpadsmit līdz piecpadsmit grādiem." }] },
+        "question": "Kāds laiks būs rīt no rīta?",
+        "options": ["Lietains", "Mākoņains, bet bez lietus", "Saulains un silts"]
+      },
+      "answer_key_json": { "correct": 1 }
+    },
+    {
+      "seed_id": "lv-b1-l6", "skill": "listening", "task_type": "listening_mcq",
+      "content_json": {
+        "audio": { "segments": [{ "voice": "female", "text": "Vēlaties uzlabot latviešu valodu? Valodu centrs aicina uz bezmaksas kursiem pieaugušajiem. Nodarbības notiks divas reizes nedēļā — pirmdienās un ceturtdienās no pulksten sešiem vakarā. Pieteikties var pa tālruni vai mūsu mājaslapā līdz pirmajam septembrim." }] },
+        "question": "Kurās dienās notiks nodarbības?",
+        "options": ["Pirmdienās un ceturtdienās", "Otrdienās un piektdienās", "Tikai sestdienās"]
+      },
+      "answer_key_json": { "correct": 0 }
+    },
+
+    {
+      "seed_id": "lv-b1-w1", "skill": "writing", "task_type": "writing_short",
+      "content_json": {
+        "situation": "Jūsu draugs Andris nākamnedēļ brauks uz Rīgu un grib ar jums satikties.",
+        "prompt": "Uzrakstiet Andrim īsu ziņu!",
+        "contentPoints": [
+          "Pastāstiet, kurā dienā un cikos jums ir brīvs laiks.",
+          "Ieteiciet vietu, kur satikties.",
+          "Pajautājiet, ko viņš grib darīt Rīgā."
+        ]
+      }
+    },
+    {
+      "seed_id": "lv-b1-w2", "skill": "writing", "task_type": "writing_short",
+      "content_json": {
+        "situation": "Jūs rīt nevarēsiet ierasties darbā.",
+        "prompt": "Uzrakstiet ziņu savai vadītājai Ilzei!",
+        "contentPoints": [
+          "Paskaidrojiet, kāpēc rīt nevarēsiet atnākt.",
+          "Pastāstiet, kad atkal būsiet darbā.",
+          "Pajautājiet, kas jums jāizdara, kad atgriezīsieties."
+        ]
+      }
+    },
+    {
+      "seed_id": "lv-b1-w3", "skill": "writing", "task_type": "writing_short",
+      "content_json": {
+        "situation": "Sestdien jūsu dzīvoklī notiks remonts.",
+        "prompt": "Uzrakstiet paziņojumu saviem kaimiņiem!",
+        "contentPoints": [
+          "Pastāstiet, kad un kāpēc būs troksnis.",
+          "Uzrakstiet, cik ilgi remonts turpināsies.",
+          "Atvainojieties un uzrakstiet, kā ar jums sazināties."
+        ]
+      }
+    },
+
+    {
+      "seed_id": "lv-b1-s1", "skill": "speaking", "task_type": "speaking_monologue",
+      "content_json": {
+        "question": "Pastāstiet par savu darbu! Ko jūs darāt darbā, un kas jums darbā patīk?",
+        "audio": { "segments": [{ "voice": "male", "text": "Pastāstiet par savu darbu! Ko jūs darāt darbā, un kas jums darbā patīk?" }] }
+      }
+    },
+    {
+      "seed_id": "lv-b1-s2", "skill": "speaking", "task_type": "speaking_monologue",
+      "content_json": {
+        "question": "Kā jūs parasti pavadāt brīvdienas? Pastāstiet, ko darījāt pagājušajā nedēļas nogalē!",
+        "audio": { "segments": [{ "voice": "male", "text": "Kā jūs parasti pavadāt brīvdienas? Pastāstiet, ko darījāt pagājušajā nedēļas nogalē!" }] }
+      }
+    },
+    {
+      "seed_id": "lv-b1-s3", "skill": "speaking", "task_type": "speaking_monologue",
+      "content_json": {
+        "question": "Pastāstiet par vietu, kur jūs dzīvojat! Kas tur ir labs, un ko jūs gribētu mainīt?",
+        "audio": { "segments": [{ "voice": "female", "text": "Pastāstiet par vietu, kur jūs dzīvojat! Kas tur ir labs, un ko jūs gribētu mainīt?" }] }
+      }
+    }
+  ]
+}

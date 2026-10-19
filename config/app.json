@@ -18,6 +18,7 @@
   "calibration": { "minScripts": 50, "minAgreement": 0.8, "maxBandDiff": 1 },
 
   "rateLimits": {
+    "diagnosticStart": { "user": 20, "anon": 5, "anonIp": 20 },
     "grading": { "user": 30, "anon": 3, "anonIp": 10 },
     "transcription": { "user": 30, "anon": 2, "anonIp": 6 },
     "adminGenerate": { "user": 200 }

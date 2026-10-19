@@ -10,7 +10,8 @@ insert into auth.users (id, email, raw_user_meta_data) values
 update public.profiles set is_admin = true where id = '00000000-0000-0000-0000-0000000000ad';
 
 insert into public.items (id, exam_code, skill, task_type, content_json, answer_key_json, status) values
-  ('10000000-0000-0000-0000-000000000001', 'lv-b1', 'reading', 'reading_mcq', '{"q":"?"}', '{"correct":1}', 'approved');
+  ('10000000-0000-0000-0000-000000000001', 'lv-b1', 'reading', 'reading_mcq', '{"q":"?"}', '{"correct":1}', 'approved'),
+  ('10000000-0000-0000-0000-000000000002', 'lv-b1', 'writing', 'writing_short', '{"prompt":"?"}', null, 'approved');
 insert into public.attempts (id, user_id, mode, exam_code) values
   ('20000000-0000-0000-0000-00000000000a', '00000000-0000-0000-0000-00000000000a', 'diagnostic', 'lv-b1'),
   ('20000000-0000-0000-0000-00000000000b', '00000000-0000-0000-0000-00000000000b', 'diagnostic', 'lv-b1');
@@ -18,7 +19,7 @@ insert into public.attempts (id, anon_token, mode, exam_code) values
   ('20000000-0000-0000-0000-0000000000cc', 'hash-of-anon-token', 'diagnostic', 'lv-b1');
 insert into public.responses (attempt_id, item_id, score, released_at) values
   ('20000000-0000-0000-0000-00000000000a', '10000000-0000-0000-0000-000000000001', 1, now()),
-  ('20000000-0000-0000-0000-00000000000a', '10000000-0000-0000-0000-000000000001', 5, null),
+  ('20000000-0000-0000-0000-00000000000a', '10000000-0000-0000-0000-000000000002', 5, null),
   ('20000000-0000-0000-0000-00000000000b', '10000000-0000-0000-0000-000000000001', 0, now());
 insert into public.purchases (user_id, email, product, amount_cents, status) values
   ('00000000-0000-0000-0000-00000000000a', 'anna@example.com', 'founding_pass', 2900, 'paid'),
@@ -100,7 +101,7 @@ set role authenticated;
 set request.jwt.claim.sub = '00000000-0000-0000-0000-0000000000ad';
 do $$ begin
   assert public.is_admin(), 'admin flag works';
-  assert (select count(*) from public.items) = 1, 'admin sees items';
+  assert (select count(*) from public.items) = 2, 'admin sees items';
   assert (select count(*) from public.attempts) = 3, 'admin sees all attempts';
   assert (select count(*) from public.responses) = 3, 'admin sees all responses incl. unreleased';
   assert (select count(*) from public.purchases) = 2, 'admin sees all purchases';
@@ -124,6 +125,18 @@ do $$ begin
   assert (select count(*) from public.purchases where email = 'boris@example.com' and user_id is null) = 1, 'purchase kept, unlinked';
   assert (select count(*) from public.attempts where id = '20000000-0000-0000-0000-00000000000b') = 0, 'attempts deleted';
   assert (select count(*) from public.profiles where id = '00000000-0000-0000-0000-00000000000b') = 0, 'profile deleted';
+end $$;
+
+-- One answer per item per attempt; new grading status allowed ----------------
+do $$ begin
+  begin
+    insert into public.responses (attempt_id, item_id) values
+      ('20000000-0000-0000-0000-00000000000a', '10000000-0000-0000-0000-000000000001');
+    raise exception 'duplicate answer was allowed';
+  exception when unique_violation then null;
+  end;
+  insert into public.responses (attempt_id, item_id, grading_status) values
+    ('20000000-0000-0000-0000-0000000000cc', '10000000-0000-0000-0000-000000000002', 'awaiting_upload');
 end $$;
 
 -- Storage buckets ------------------------------------------------------------

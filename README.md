@@ -179,3 +179,36 @@ or by a script — never on a user request. Users only get the stored public URL
 node --env-file=.env scripts/smoke-ai.js          # llm + tts + stt (a few cents)
 node --env-file=.env scripts/smoke-ai.js llm      # just one
 ```
+
+## Free diagnostic (Phase 1)
+
+Flow: `pages/diagnostic.html` → `pages/results.html?attempt=…`
+
+| Endpoint | What |
+|---|---|
+| `POST /api/attempt-start` | Picks approved items per `diagnostic.sections` in the exam config; returns them **without** answer keys or listening scripts |
+| `POST /api/attempt-answer` | Objective answers (scored at once), writing text (queued for grading), or `retry` of a failed grading |
+| `POST /api/attempt-audio` | Creates the speaking response + a signed upload URL (private bucket `speaking-audio`) |
+| `/.netlify/functions/grade-response-background` | Background function: speech-to-text (speaking) + AI grading; idempotent |
+| `POST /api/attempt-finish` | Closes the attempt |
+| `GET /api/attempt-status?id=` | Progress, per-skill estimate; full feedback only for the logged-in owner after finishing |
+| `POST /api/attempt-claim` | After login, moves this browser's anonymous attempts to the account |
+
+Grading: `netlify/functions/_lib/graders/` — code checks first (word count, almost-empty
+answers are scored 0 without calling the AI), then the LLM scores the rubric from the exam
+config. Bands/max always come from the config, error spans are located in code, and the full
+output (with `promptVersion`) is stored in `responses.ai_output_json`.
+
+### Seed items
+
+`content/items/lv-b1/seed.json` holds original items in the B1 task formats (to be reviewed by
+a Latvian teacher). Load them and generate their audio once:
+
+```bash
+node scripts/seed-items.js --dry-run                 # validate only
+node --env-file=.env scripts/seed-items.js           # upsert + Azure TTS (cached)
+node --env-file=.env scripts/seed-items.js --no-tts  # without audio (listening items are then not used)
+```
+
+> Background Functions run up to 15 minutes. Check that your Netlify plan includes them
+> (Site configuration → Functions); without them grading would hit the normal function timeout.

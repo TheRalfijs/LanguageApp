@@ -88,3 +88,14 @@ export async function initAuth() {
   updateHeader(currentUser);
   return currentUser;
 }
+
+// After login: move this browser's anonymous attempts to the account.
+// Never throws — a failed claim is retried on the next login.
+export async function claimAnonymousAttempts() {
+  try {
+    const { api } = await import('./api.js');
+    return await api('attempt-claim', { method: 'POST', body: {} });
+  } catch {
+    return { claimed: 0 };
+  }
+}
