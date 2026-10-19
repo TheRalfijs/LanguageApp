@@ -5,5 +5,15 @@
   "ENABLED_LOCALES": ["lv", "en", "uk"],
   "localeNames": { "lv": "Latviešu", "en": "English", "uk": "Українська", "ru": "Русский" },
   "defaultExam": "lv-b1",
-  "currency": "eur"
+  "currency": "eur",
+
+  "products": {
+    "founding_pass": { "amountCents": 2900, "grantsExam": "lv-b1", "accessDays": 90, "accessStarts": "launch", "refundable": true, "enabled": true },
+    "essay_check": { "amountCents": 500, "credits": 1, "enabled": true },
+    "b1_30": { "amountCents": 2900, "grantsExam": "lv-b1", "accessDays": 30, "accessStarts": "purchase", "enabled": false },
+    "b1_90": { "amountCents": 4900, "grantsExam": "lv-b1", "accessDays": 90, "accessStarts": "purchase", "enabled": false }
+  },
+  "launch": { "fullProductLaunchDate": null },
+
+  "calibration": { "minScripts": 50, "minAgreement": 0.8, "maxBandDiff": 1 }
 }

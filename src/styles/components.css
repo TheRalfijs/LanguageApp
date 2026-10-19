@@ -76,3 +76,12 @@
 /* Hero */
 .hero { padding-block: var(--space-12) var(--space-8); max-width: 42rem; }
 .lead { font-size: 1.15rem; color: var(--c-muted); }
+
+/* Dev-only banner (src/dev-warnings.js) */
+.dev-warning {
+  padding: var(--space-2) var(--space-4);
+  background: #fff4ce;
+  color: #5c4400;
+  font-size: var(--fs-small);
+  text-align: center;
+}

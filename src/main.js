@@ -9,6 +9,10 @@ async function boot() {
     el.textContent = new Date().getFullYear();
   });
 
+  if (import.meta.env.DEV) {
+    import('./dev-warnings.js').then((m) => m.showDevWarnings());
+  }
+
   if (import.meta.env.PROD && 'serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').catch(() => {});
   }

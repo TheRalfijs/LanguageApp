@@ -1,0 +1,219 @@
+{
+  "_placeholder": true,
+  "_placeholderNote": "Task types, point values, word limits and rubric criteria below are PLACEHOLDERS. Replace them with values derived from docs/viaa-b1-programma.pdf, then set _placeholder to false.",
+
+  "code": "lv-b1",
+  "contentLanguage": "lv",
+  "level": "B1",
+  "version": 1,
+  "source": { "document": "docs/viaa-b1-programma.pdf", "lastChecked": null },
+
+  "passRule": {
+    "type": "per_skill_min",
+    "minRatio": 0.6,
+    "estimate": { "likelyPassFrom": 0.7, "likelyFailBelow": 0.5 }
+  },
+
+  "skills": [
+    { "id": "listening", "durationMin": 40 },
+    { "id": "reading", "durationMin": 40 },
+    { "id": "writing", "durationMin": 40 },
+    { "id": "speaking", "durationMin": 15 }
+  ],
+
+  "taskTypes": [
+    {
+      "id": "listening_mcq",
+      "skill": "listening",
+      "answerType": "single_choice",
+      "items": 5,
+      "pointsPerItem": 1,
+      "optionsPerItem": 3,
+      "instruction": "Noklausieties ierakstu un izvēlieties pareizo atbildi.",
+      "_placeholder": true
+    },
+    {
+      "id": "listening_true_false",
+      "skill": "listening",
+      "answerType": "true_false",
+      "items": 5,
+      "pointsPerItem": 1,
+      "instruction": "Noklausieties ierakstu. Vai apgalvojums ir pareizs vai nepareizs?",
+      "_placeholder": true
+    },
+    {
+      "id": "reading_mcq",
+      "skill": "reading",
+      "answerType": "single_choice",
+      "items": 5,
+      "pointsPerItem": 1,
+      "optionsPerItem": 3,
+      "instruction": "Izlasiet tekstu un izvēlieties pareizo atbildi.",
+      "_placeholder": true
+    },
+    {
+      "id": "reading_matching",
+      "skill": "reading",
+      "answerType": "matching",
+      "items": 5,
+      "pointsPerItem": 1,
+      "instruction": "Izlasiet sludinājumus un atrodiet katram cilvēkam piemērotāko.",
+      "_placeholder": true
+    },
+    {
+      "id": "writing_short",
+      "skill": "writing",
+      "answerType": "free_text",
+      "items": 1,
+      "wordLimits": { "min": 60, "max": 80 },
+      "contentPoints": 3,
+      "rubric": "writing",
+      "instruction": "Uzrakstiet īsu ziņu. Atbildiet uz visiem jautājumiem.",
+      "_placeholder": true
+    },
+    {
+      "id": "writing_letter",
+      "skill": "writing",
+      "answerType": "free_text",
+      "items": 1,
+      "wordLimits": { "min": 100, "max": 120 },
+      "contentPoints": 4,
+      "rubric": "writing",
+      "instruction": "Uzrakstiet vēstuli. Atbildiet uz visiem jautājumiem.",
+      "_placeholder": true
+    },
+    {
+      "id": "speaking_monologue",
+      "skill": "speaking",
+      "answerType": "speech",
+      "items": 1,
+      "maxAnswerSec": 120,
+      "rubric": "speaking",
+      "instruction": "Noklausieties jautājumu un atbildiet.",
+      "_placeholder": true
+    }
+  ],
+
+  "rubrics": {
+    "writing": {
+      "_placeholder": true,
+      "criteria": [
+        {
+          "id": "task_completion",
+          "max": 3,
+          "descriptor": "All required content points are addressed, the text type and register fit the task, and the word limit is respected.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "Task not addressed or off-topic." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Only some content points addressed; purpose partly unclear." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Most content points addressed adequately." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "All content points addressed clearly and appropriately." }
+          ]
+        },
+        {
+          "id": "coherence",
+          "max": 3,
+          "descriptor": "Text is logically organised; ideas are linked with appropriate connectors.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "Isolated words or phrases; no organisation." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Simple sentences, few or repetitive connectors." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Mostly logical; basic connectors used correctly." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "Clear, logical text; varied connectors." }
+          ]
+        },
+        {
+          "id": "vocabulary",
+          "max": 3,
+          "descriptor": "Range and accuracy of vocabulary for everyday B1 topics.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "Vocabulary too limited to convey meaning." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Limited range; frequent wrong word choice impedes meaning." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Adequate range; some errors that do not impede meaning." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "Good range for the task; occasional minor errors." }
+          ]
+        },
+        {
+          "id": "grammar",
+          "max": 3,
+          "descriptor": "Accuracy of grammar (case endings, verb forms, agreement) and spelling, including diacritics.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "Errors make the text mostly incomprehensible." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Frequent basic errors; meaning sometimes unclear." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Some errors, but meaning is clear." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "Good control of simple structures; few errors." }
+          ]
+        }
+      ]
+    },
+    "speaking": {
+      "_placeholder": true,
+      "criteria": [
+        {
+          "id": "task_completion",
+          "max": 3,
+          "descriptor": "Answers the question fully and relevantly within the time.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "No relevant answer." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Partly relevant, very short answer." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Relevant answer with some detail." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "Full, relevant answer with detail and examples." }
+          ]
+        },
+        {
+          "id": "vocabulary",
+          "max": 3,
+          "descriptor": "Range and appropriateness of vocabulary.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "Too limited to convey meaning." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Basic words only; frequent gaps." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Adequate for the topic." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "Good range, mostly appropriate." }
+          ]
+        },
+        {
+          "id": "grammar",
+          "max": 3,
+          "descriptor": "Grammatical accuracy of spoken language.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "Errors prevent understanding." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Frequent basic errors." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Some errors, meaning clear." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "Good control of simple structures." }
+          ]
+        },
+        {
+          "id": "coherence",
+          "max": 3,
+          "descriptor": "Fluency and logical connection of ideas.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "Isolated words, long pauses." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Short phrases, frequent pauses." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Mostly connected speech." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "Connected, easy to follow." }
+          ]
+        },
+        {
+          "id": "pronunciation",
+          "max": 3,
+          "approximate": true,
+          "descriptor": "Intelligibility of pronunciation, estimated from the transcript only.",
+          "bands": [
+            { "band": 0, "min": 0, "max": 0, "descriptor": "Mostly unintelligible." },
+            { "band": 1, "min": 1, "max": 1, "descriptor": "Often hard to understand." },
+            { "band": 2, "min": 2, "max": 2, "descriptor": "Generally intelligible." },
+            { "band": 3, "min": 3, "max": 3, "descriptor": "Clearly intelligible." }
+          ]
+        }
+      ]
+    }
+  },
+
+  "diagnostic": {
+    "durationMin": 15,
+    "sections": [
+      { "skill": "reading", "taskType": "reading_mcq", "items": 4 },
+      { "skill": "listening", "taskType": "listening_mcq", "items": 4 },
+      { "skill": "writing", "taskType": "writing_short", "items": 1, "wordLimits": { "min": 60, "max": 80 } },
+      { "skill": "speaking", "taskType": "speaking_monologue", "items": 1, "maxAnswerSec": 60 }
+    ]
+  }
+}

@@ -28,6 +28,20 @@
     "backHome": "Uz sākumlapu",
     "loading": "Ielādē…"
   },
+  "skills": {
+    "listening": "Klausīšanās",
+    "reading": "Lasīšana",
+    "writing": "Rakstīšana",
+    "speaking": "Runāšana"
+  },
+  "status": {
+    "pass": "Nokārtots",
+    "fail": "Nav nokārtots",
+    "likely_pass": "Visticamāk nokārtotu",
+    "borderline": "Uz robežas",
+    "likely_fail": "Visticamāk nenokārtotu",
+    "not_attempted": "Nav pildīts"
+  },
   "footer": {
     "disclaimer": "Neatkarīga mācību platforma. Nav saistīta ar VIAA.",
     "terms": "Lietošanas noteikumi",

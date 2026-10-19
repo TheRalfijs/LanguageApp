@@ -28,6 +28,20 @@
     "backHome": "На главную",
     "loading": "Загрузка…"
   },
+  "skills": {
+    "listening": "Аудирование",
+    "reading": "Чтение",
+    "writing": "Письмо",
+    "speaking": "Говорение"
+  },
+  "status": {
+    "pass": "Сдано",
+    "fail": "Не сдано",
+    "likely_pass": "Вероятно сдадите",
+    "borderline": "На грани",
+    "likely_fail": "Вероятно не сдадите",
+    "not_attempted": "Не выполнено"
+  },
   "footer": {
     "disclaimer": "Независимая учебная платформа. Не связана с VIAA.",
     "terms": "Условия использования",

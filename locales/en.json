@@ -28,6 +28,20 @@
     "backHome": "Back to home",
     "loading": "Loading…"
   },
+  "skills": {
+    "listening": "Listening",
+    "reading": "Reading",
+    "writing": "Writing",
+    "speaking": "Speaking"
+  },
+  "status": {
+    "pass": "Passed",
+    "fail": "Not passed",
+    "likely_pass": "Likely pass",
+    "borderline": "Borderline",
+    "likely_fail": "Likely fail",
+    "not_attempted": "Not attempted"
+  },
   "footer": {
     "disclaimer": "Independent learning platform. Not affiliated with VIAA.",
     "terms": "Terms of service",
